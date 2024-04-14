@@ -53,7 +53,7 @@ const fulfillWithText = () => {
         item.addEventListener('click', (e) => {
             e.target.classList.toggle('hide');  
             e.target.parentElement.nextElementSibling.classList.toggle('hide');
-            e.target.parentElement.querySelector('.plus_icon').classList.remove('hide');
+            e.target.parentElement.querySelector('.plus_icon').classList.toggle('hide');
         });
     });
 };
