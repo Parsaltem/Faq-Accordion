@@ -39,6 +39,12 @@ const fulfillWithText = () => {
 
     paragraphContainer.innerHTML = textContainer;
 
+    plusAndMinusIcons()
+
+};
+
+const plusAndMinusIcons = () => {
+
     const plusIcons = document.querySelectorAll('.plus_icon');
     const minusIcons = document.querySelectorAll('.minus_icon');
 
@@ -55,6 +61,7 @@ const fulfillWithText = () => {
 
     openAndClose(plusIcons, '.minus_icon');
     openAndClose(minusIcons, '.plus_icon');
-};
+
+}
 
 fulfillWithText()
