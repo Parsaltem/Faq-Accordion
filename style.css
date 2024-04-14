@@ -1,0 +1,133 @@
+:root{
+--white: hsl(0, 0%, 100%);
+--Lightpink: hsl(275, 100%, 97%);
+--Grayish-purple: hsl(292, 16%, 49%);
+--Dark-purple: hsl(292, 42%, 14%);
+
+--fw-400: 400;
+--fw-600: 600;
+--fw-700: 700;
+}
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 10px;
+    font-family: 'Work Sans', sans-serif, Arial, Helvetica;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Lightpink);
+}
+
+#image-container{
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 17%;
+    width: 100%;
+    z-index: -1;
+}
+
+#container{
+    max-width: 24rem;
+    min-width: 24rem;
+    display: block;
+    margin: 4rem auto;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+}
+
+#paragraphs{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 1.8rem;
+}
+
+h1,
+h2,
+p{
+    margin-top: 1rem;
+}
+
+h1{
+    font-weight: var(--fw-700);
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+h2{
+    font-weight: var(--fw-600);
+    font-size: 1.2rem;
+    margin: 2rem 0;
+}
+
+p{
+    font-weight: var(--fw-400);
+    font-size: 1rem;
+    color: var(--Grayish-purple);
+    margin: 2rem 0;
+}
+
+hr{
+    width: 100%;
+    margin: 1rem auto;
+    border: 0.5px solid var(--Lightpink)
+}
+
+hr:last-of-type{
+    display: none;
+}
+
+#header{
+    display: flex;
+    justify-content: flex-start
+}
+
+img[alt='icon-star'] {
+    width: 7%;
+    position: relative;
+    top: 0.5rem
+}
+
+.plus_icon,
+.minus_icon{
+    position: absolute;
+    margin-top: -3.7rem;
+    margin-left: 19.6rem; 
+}
+
+.hide{
+    display: none;
+}
+
+@media only screen and (min-width: 60rem){
+
+    #container{
+        max-width: 48rem;
+        min-width: 48rem;
+        border-radius: 1.5rem;
+    }
+
+    .plus_icon,
+    .minus_icon{
+    margin-left: 42rem; 
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    #image-container{
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+    }
+    
+}
