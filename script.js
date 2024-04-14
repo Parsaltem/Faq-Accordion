@@ -40,22 +40,21 @@ const fulfillWithText = () => {
     paragraphContainer.innerHTML = textContainer;
 
     const plusIcons = document.querySelectorAll('.plus_icon');
-    Array.from(plusIcons).forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.target.classList.toggle('hide');
-            e.target.parentElement.nextElementSibling.classList.toggle('hide');
-            e.target.parentElement.querySelector('.minus_icon').classList.toggle('hide');
-        });
-    });
-
     const minusIcons = document.querySelectorAll('.minus_icon');
-    Array.from(minusIcons).forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.target.classList.toggle('hide');  
-            e.target.parentElement.nextElementSibling.classList.toggle('hide');
-            e.target.parentElement.querySelector('.plus_icon').classList.toggle('hide');
+
+    const openAndClose = (array, className) => {
+        Array.from(array).forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.target.classList.toggle('hide');
+                e.target.parentElement.nextElementSibling.classList.toggle('hide');
+                e.target.parentElement.querySelector(className).classList.toggle('hide');
+            });
         });
-    });
+
+    }
+
+    openAndClose(plusIcons, '.minus_icon');
+    openAndClose(minusIcons, '.plus_icon');
 };
 
 fulfillWithText()
