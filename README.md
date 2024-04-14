@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-[Solution URL](https://parsaltem.github.io/Faq-Accordion/)
+[Solution URL](https://parsaltem.github.io/Faq-Accordion/){:target="_blank" rel="noopener"}
 
 ## My process
 
